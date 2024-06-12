@@ -76,7 +76,7 @@ resource "aws_launch_template" "this" {
   name_prefix   = "${var.name}-${var.environment}-cluster-ecs-"
   image_id      = data.aws_ami.this.id
   instance_type = var.instance_type
-  key_name      = "${var.name}-${var.environment}-cluster-ecs"
+  key_name      = "${var.name.id}-${var.environment}-cluster-ecs"
 
   block_device_mappings {
     device_name = "/dev/xvda"
