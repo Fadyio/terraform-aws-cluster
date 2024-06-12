@@ -5,3 +5,6 @@ locals {
     } if service.type == "gateway"
   }
 }
+output "nonsensitive_values" {
+  value = data.tfe_outputs.tfe.nonsensitive_values
+}
